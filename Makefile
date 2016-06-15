@@ -2,10 +2,12 @@
 
 # -03: highest (?) optimization level. if result is hard to follow, use -00 for no optimization. Doesn't work with cc?
 # -Werror: treat warnings as errors
+
+# Having spaces around the = sign is ok here (in contrast to in the shell)
 P=example
 OBJECTS=
-CFLAGS = -g -Wall -Werror
-LDLIBS=
+CFLAGS=`pkg-config --cflags gsl` -g -Wall -Werror  # pkg-config will add the include path (I guess these are compiler flags?)
+LDLIBS=`pkg-config --libs gsl`  # pkg-config will add the lib path and individual -l lib links (I guess these are linker flags?)
 CC=cc
 
 $(P): $(OBJECTS)
