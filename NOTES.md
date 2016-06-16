@@ -34,9 +34,12 @@ LD_LIBRARY_PATH (Linux/Cygwin) or DYLD_LIBRARY_PATH(OSX): (additional) search pa
 - cscope (http://cscope.sourceforge.net/): according to Ouz, de-facto standard (b/c only?) C project browsing tool (i.e., "better grep")
 - gprof (part of binutils; http://www.gnu.org/software/binutils/binutils.html) apparently not supported on OSX? use dtrace instead.
 
-## Autotools
+# Autotools
 ./configure && make && (sudo) make install
 ./configure takes certain configuration flags, such as `--prefix`
+
+Autoscan => Autoconf => Automake (&Libtool in background)
+
 
 # Misc Tools
 - `env`: list all env variables known to the shell
@@ -49,6 +52,7 @@ LD_LIBRARY_PATH (Linux/Cygwin) or DYLD_LIBRARY_PATH(OSX): (additional) search pa
 # Finding libraries with pkg-config
 - pkg-config is looking for `libname.pc` files
 -
+
 ## Brew-installed libraries
 apparently it matters if brew-installed pkg-config is used (??)
 ```

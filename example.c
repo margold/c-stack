@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
 	printf("Also, a gsl test: %g\n", gsl_cdf_gaussian_P(-1.96, 1));
 
 	char *home = getenv("HOME");
-	printf("home is %s\n", home);
+	printf("And a getenv test: home is %s\n", home);
 
 	return 0;
 }
