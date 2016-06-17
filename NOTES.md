@@ -38,7 +38,21 @@ LD_LIBRARY_PATH (Linux/Cygwin) or DYLD_LIBRARY_PATH(OSX): (additional) search pa
 ./configure && make && (sudo) make install
 ./configure takes certain configuration flags, such as `--prefix`
 
-Autoscan => Autoconf => Automake (&Libtool in background)
+Autoscan => Autoconf => Automake (&Libtool in case shared libraries need to be installed (installed?))
+
+## Autoscan
+
+## Also: problems with autotools, alternatives
+Problems:
+Practical:
+- m4 macro language is little-known
+- many checks are obsolete or redundant
+Also philosophical problems:
+- many checks abstract away incompatibilities that the developer should have addressed
+
+Alternatives:
+CMake
+others
 
 
 # Misc Tools

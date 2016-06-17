@@ -1,5 +1,12 @@
 # Adding pkg-config support to GMP (or: get GMP recognized by aqbanking)
 
+TL;DR if you compile against libraries installed by brew, export the
+```
+CFLAGS="$CFLAGS -I/usr/local/include"
+LDFLAGS="$LDFLAGS -L/usr/local/lib"
+```
+user environmental variables.
+
 0. (pkg-config file for picking up gmp was installed manually as per https://gist.github.com/margold/73e90e1a564c55bbe750477bb9c78abd)
 
 1. Starting with `auto.conf`, which includes gmp.h:
